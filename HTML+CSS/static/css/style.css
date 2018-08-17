@@ -4595,6 +4595,14 @@ ul {
     font-size: 18px;
     font-family: "Source-Sans-Pro-Light-italic", sans-serif;
     color: #393939; }
+    .mod-content-section .mod-body.full-width {
+      max-width: 1000px; }
+      .mod-content-section .mod-body.full-width .section-title {
+        text-align: center;
+        margin: 30px 0px; }
+        .mod-content-section .mod-body.full-width .section-title span:before {
+          left: -105%;
+          width: 100%; }
     .mod-content-section .mod-body .title {
       font-size: 18px;
       color: #1f1a4f;
@@ -4630,7 +4638,8 @@ ul {
         height: 15px;
         margin-right: 10px; }
   .mod-content-section .btn-section {
-    margin: 10px 0px; }
+    margin: 10px 0px;
+    position: relative; }
     .mod-content-section .btn-section .mod-btn {
       font-family: "Source-Sans-Pro-bold", sans-serif;
       border-radius: 10px;
@@ -4665,6 +4674,21 @@ ul {
         margin: 0px 10px;
         color: rgba(255, 255, 255, 0.4);
         white-space: nowrap; }
+        .mod-content-section .tab.content-tab ul li .dropsub-menu {
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          right: 0px;
+          top: 6px;
+          position: absolute; }
+          .mod-content-section .tab.content-tab ul li .dropsub-menu:after {
+            content: "\e80a";
+            font-family: "waf-icon-font";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%; }
         .mod-content-section .tab.content-tab ul li:before {
           content: "";
           position: absolute;
@@ -4723,6 +4747,65 @@ ul {
             background-color: #ffffff; }
           .mod-content-section .tab.content-tab ul li.active span:before, .mod-content-section .tab.content-tab ul li.active span:after {
             background-color: #ffffff; }
+        .mod-content-section .tab.content-tab ul li.submenu ul {
+          position: absolute;
+          border: none;
+          background-color: #1f1a4f;
+          border-radius: unset;
+          flex-direction: column;
+          width: calc(100% + 20px);
+          left: -14px;
+          top: 45px;
+          padding: 2px 15px;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          z-index: 99;
+          display: none; }
+          .mod-content-section .tab.content-tab ul li.submenu ul li {
+            flex: unset;
+            text-align: left;
+            padding: 10px 0px;
+            margin: 0px;
+            color: #ffffff; }
+            .mod-content-section .tab.content-tab ul li.submenu ul li:before {
+              content: "";
+              top: auto;
+              bottom: 0px;
+              width: 100%;
+              height: 1px;
+              transform: rotate(0deg);
+              left: 0px;
+              opacity: 0.4;
+              /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,1+70,0+100 */
+              background: -moz-linear-gradient(left, white 0%, white 70%, rgba(255, 255, 255, 0) 100%);
+              /* FF3.6-15 */
+              background: -webkit-linear-gradient(left, white 0%, white 70%, rgba(255, 255, 255, 0) 100%);
+              /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to right, white 0%, white 70%, rgba(255, 255, 255, 0) 100%);
+              /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+              /* IE6-9 */ }
+        .mod-content-section .tab.content-tab ul li.submenu.active-dropdown ul {
+          display: flex; }
+    .mod-content-section .tab.content-tab.runner-tab ul {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      max-width: 1050px;
+      margin: auto;
+      border-radius: 50px; }
+      .mod-content-section .tab.content-tab.runner-tab ul li {
+        border: none;
+        flex: 1;
+        padding: 10px; }
+        .mod-content-section .tab.content-tab.runner-tab ul li:before {
+          top: 20px;
+          transform: rotate(90deg);
+          width: 30px;
+          color: rgba(255, 255, 255, 0.4); }
+        .mod-content-section .tab.content-tab.runner-tab ul li:after {
+          display: none; }
+        .mod-content-section .tab.content-tab.runner-tab ul li span:before, .mod-content-section .tab.content-tab.runner-tab ul li span:after {
+          display: none; }
+      .mod-content-section .tab.content-tab.runner-tab ul a {
+        display: block; }
   .mod-content-section .vision-mission-section .vision-wrapper .vision-block {
     display: flex;
     align-items: flex-end;
@@ -4817,14 +4900,80 @@ ul {
       color: #1f1a4f;
       margin: 0px;
       white-space: nowrap; }
+  .form-element.text-center .input-box {
+    margin-left: 10px;
+    flex-basis: unset; }
+  .form-element.text-center .label {
+    margin-left: 0px;
+    flex-basis: unset; }
+  .form-element.text-center .form-group {
+    justify-content: center; }
   .form-element .input-box {
     margin-left: 20px;
     flex-basis: 60%; }
+  .form-element .input-radio {
+    margin-left: 20px;
+    flex-basis: 60%;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
+    .form-element .input-radio .radio-wrapper {
+      position: relative; }
+      .form-element .input-radio .radio-wrapper span {
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: #f6f6f6;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        margin-right: 10px;
+        font-size: 16px; }
+      .form-element .input-radio .radio-wrapper input[type="radio"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        z-index: 9; }
+      .form-element .input-radio .radio-wrapper input[type="radio"]:checked + span {
+        background-color: #c82027;
+        color: #ffffff; }
+  .form-element .user-photo {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+    margin: 0px 15px;
+    overflow: hidden; }
+    .form-element .user-photo img {
+      width: 38px;
+      top: 8px;
+      position: relative; }
   .form-element input[type="text"] {
     background-color: #f6f6f6;
     width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px 10px;
     outline: none;
     font-size: 16px;
@@ -4833,7 +4982,7 @@ ul {
     background-color: #f6f6f6;
     width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px 10px;
     outline: none;
     font-size: 16px;
@@ -4853,7 +5002,7 @@ ul {
     .form-element .select-box .select-out {
       padding: 5px 10px;
       background-color: #f6f6f6;
-      border-radius: 5px;
+      border-radius: 10px;
       display: block;
       font-family: "Source-Sans-Pro-Semibold", sans-serif;
       font-size: 16px;
@@ -4883,7 +5032,7 @@ ul {
   .form-element .upload-box .file-upload {
     padding: 8px 15px;
     background-color: #f6f6f6;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
     font-size: 16px;
     color: #1f1a4f;
@@ -4920,7 +5069,8 @@ ul {
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
     font-size: 14px; }
 
-.mod-edit .form-element input[type="text"] {
+.mod-edit .form-element input[type="text"],
+.mod-edit .form-element textarea {
   background-color: transparent;
   border: 1px solid #e1e1e1; }
 .mod-edit .form-element .select-box .select-out {
@@ -4940,22 +5090,184 @@ ul {
 .dashboard-section .mod-body {
   max-width: 1000px; }
 
-.table {
+.responsive-table {
   border: 1px solid #dee2e6;
   border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; }
-  .table th, .table td {
-    padding: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0px 10px;
+  border-top: none; }
+
+.table th, .table td {
+  padding: 12px 10px;
+  text-align: center;
+  font-family: "Source-Sans-Pro-Semibold", sans-serif;
+  font-size: 16px;
+  position: relative; }
+.table td {
+  color: #1f1a4f; }
+.table th, .table th.nr {
+  color: #a5a5a5;
+  text-transform: uppercase; }
+.table .nr {
+  color: #c82027; }
+
+.mod-event .event-wrapper {
+  position: relative;
+  padding: 20px; }
+  .mod-event .event-wrapper:before {
+    content: "";
+    left: 50%;
+    top: 0px;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: #f8f8f8;
+    position: absolute; }
+.mod-event .event-list {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0px 20px; }
+  .mod-event .event-list .event-item {
+    width: 25%;
+    margin: 0px 10px;
+    background-image: url(../images/event-bg.png);
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
+    line-height: 1;
+    color: #ffffff;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    position: relative; }
+    .mod-event .event-list .event-item:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(33, 28, 82, 0.7); }
+    .mod-event .event-list .event-item.active:before {
+      background-color: rgba(206, 38, 45, 0.8); }
+    .mod-event .event-list .event-item.active .mod-btn {
+      background-color: #ffffff;
+      color: #c82027; }
+  .mod-event .event-list .title {
+    font-size: 18px;
+    color: #ffffff;
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
-    font-size: 16px; }
-  .table td {
-    color: #1f1a4f; }
-  .table th, .table th.nr {
-    color: #a5a5a5;
-    text-transform: uppercase; }
-  .table .nr {
-    color: #c82027; }
+    max-width: 140px;
+    margin: auto;
+    line-height: 1.1;
+    top: -15px;
+    position: relative; }
+  .mod-event .event-list .date {
+    font-size: 16px;
+    font-family: "Source-Sans-Pro-regular", sans-serif;
+    padding: 10px 0px;
+    position: relative;
+    margin: 10px 0px; }
+    .mod-event .event-list .date:before, .mod-event .event-list .date:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 1px;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+1,1+30,1+79,0+100 */
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 30%, white 79%, rgba(255, 255, 255, 0) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 30%, white 79%, rgba(255, 255, 255, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 30%, white 79%, rgba(255, 255, 255, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+      /* IE6-9 */ }
+    .mod-event .event-list .date:before {
+      top: 0px; }
+    .mod-event .event-list .date:after {
+      bottom: 0px; }
+  .mod-event .event-list .mod-btn {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 12px;
+    margin-right: 0px; }
+.mod-event .slider-navigation .slider-nav {
+  position: absolute;
+  top: 50%;
+  color: #3d3d3d;
+  transform: translateY(-50%); }
+  .mod-event .slider-navigation .slider-nav.disable {
+    color: #bfbfbf; }
+.mod-event .slider-navigation .nav-left {
+  left: 0px; }
+.mod-event .slider-navigation .nav-right {
+  right: 0px; }
+
+.mod-calendar-table .calendar-filter {
+  margin: 30px 0px 15px; }
+.mod-calendar-table .form-row {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+.mod-calendar-table .form-group {
+  flex: 1; }
+  .mod-calendar-table .form-group .label {
+    flex-basis: auto; }
+.mod-calendar-table .table-head {
+  background-color: #1f1a4f;
+  font-size: 20px;
+  font-family: "Source-Sans-Pro-Semibold", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1px;
+  margin-right: 1px; }
+  .mod-calendar-table .table-head .txt-2 {
+    text-transform: initial;
+    position: relative;
+    font-family: "Source-Sans-Pro-regular", sans-serif;
+    font-size: 18px; }
+    .mod-calendar-table .table-head .txt-2:before {
+      content: "\e834";
+      position: absolute;
+      left: -22px;
+      font-family: "waf-icon-font";
+      top: 1px; }
+.mod-calendar-table .responsive-table {
+  padding: 0px; }
+.mod-calendar-table .table th {
+  color: #ffffff;
+  background-color: #c82027;
+  border-top: none; }
+.mod-calendar-table .table th.event, .mod-calendar-table .table td.event {
+  text-align: left; }
+.mod-calendar-table .table th.location, .mod-calendar-table .table td.location {
+  text-align: right;
+  padding-right: 25px; }
+.mod-calendar-table .table td.time-clock:before {
+  content: "\e834";
+  position: absolute;
+  left: -18px;
+  font-family: "waf-icon-font";
+  top: 57%;
+  transform: translateY(-50%);
+  color: #c4c4c4; }
+.mod-calendar-table .btn-section {
+  text-align: center;
+  margin-top: 25px; }
 
 @media screen and (max-width: 992px) {
   .mod-content-section .mod-body {
@@ -4983,6 +5295,10 @@ ul {
   .form-element .upload-box .file-url {
     margin-left: 0px; } }
 @media screen and (max-width: 767px) {
+  .responsive-table {
+    overflow-x: auto;
+    margin-bottom: 20px; }
+
   .mod-content-section .vision-mission-section .vision-wrapper .vision-block {
     flex-direction: column;
     margin-top: 20px;
@@ -5014,7 +5330,21 @@ ul {
   .mod-content-section .vision-mission-section .vision-wrapper p {
     padding: 0px;
     font-size: 15px;
-    text-align: left; } }
+    text-align: left; }
+  .mod-content-section .section-title {
+    margin: 8px 0px;
+    font-size: 18px; }
+  .mod-content-section .mod-body p {
+    margin: 10px 0px;
+    font-size: 15px; }
+  .mod-content-section .mod-body ul li {
+    font-size: 15px; }
+  .mod-content-section .mod-body .title {
+    font-size: 16px; }
+  .mod-content-section .btn-section .mod-btn {
+    font-size: 14px; }
+  .mod-content-section .google-map iframe {
+    height: 200px; } }
 .mod-showcase {
   position: relative;
   padding: 0px; }
@@ -5135,134 +5465,136 @@ ul {
       font-size: 18px;
       color: #939393; }
 
-.mod-leaderboard-home .leaderboard-head {
-  background-color: #1f1a4f;
-  font-size: 20px;
-  font-family: "Source-Sans-Pro-Semibold", sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 15px 25px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px; }
-.mod-leaderboard-home .leaderboard-body {
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e6e6e6; }
-  .mod-leaderboard-home .leaderboard-body .lb-category {
-    flex: 1; }
-  .mod-leaderboard-home .leaderboard-body .td {
-    padding: 10px 0px;
-    line-height: 1.1; }
-    .mod-leaderboard-home .leaderboard-body .td .photo {
-      width: 50px;
-      height: 50px;
-      display: inline-block;
-      margin-right: 10px;
-      border-radius: 10px;
-      overflow: hidden; }
-    .mod-leaderboard-home .leaderboard-body .td.td-name {
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      align-items: center;
-      color: #1f1a4f; }
-    .mod-leaderboard-home .leaderboard-body .td.td-score {
-      color: #c82027; }
-.mod-leaderboard-home .women {
-  border-left: 2px solid #e8e8e8; }
-  .mod-leaderboard-home .women .lb-category-title {
-    justify-content: flex-end; }
-.mod-leaderboard-home .lb-category-title {
-  background-color: #c82027;
-  font-size: 18px;
-  font-family: "Source-Sans-Pro-Semibold", sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 10px 25px;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 48px; }
-  .mod-leaderboard-home .lb-category-title .txt-2 {
-    font-size: 16px;
-    font-family: "Source-Sans-Pro-regular", sans-serif; }
-.mod-leaderboard-home .lb-tr {
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-  font-family: "Source-Sans-Pro-regular", sans-serif;
-  align-items: center;
-  border-bottom: 1px solid #e6e6e6;
-  margin: 0px 25px; }
-  .mod-leaderboard-home .lb-tr.header {
-    color: #a5a5a5;
+.mod-leaderboard-home {
+  padding-top: 160px; }
+  .mod-leaderboard-home .leaderboard-head {
+    background-color: #1f1a4f;
+    font-size: 20px;
+    font-family: "Source-Sans-Pro-Semibold", sans-serif;
     text-transform: uppercase;
-    padding: 0px 25px;
-    margin: 0px; }
-    .mod-leaderboard-home .lb-tr.header .td {
-      color: #a5a5a5; }
-  .mod-leaderboard-home .lb-tr:last-child {
-    border-bottom: none; }
-.mod-leaderboard-home .action {
-  background-color: #ffffff;
-  text-align: center;
-  padding: 30px; }
-.mod-leaderboard-home .leaderboard-slider {
-  background-color: #1f1a4f;
-  padding: 25px;
-  margin-top: 5px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; }
-.mod-leaderboard-home .approved-races {
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center; }
-  .mod-leaderboard-home .approved-races .slider-title {
-    flex-basis: 16%;
-    color: #b3b3b3;
-    font-family: "Source-Sans-Pro-Black", sans-serif;
-    text-transform: uppercase;
-    font-size: 32px;
-    line-height: 1;
-    border-right: 1px solid #3d3963; }
-  .mod-leaderboard-home .approved-races .marathon-slider {
-    flex-basis: 84%; }
-  .mod-leaderboard-home .approved-races .slider-list {
+    color: #ffffff;
+    padding: 15px 25px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; }
+  .mod-leaderboard-home .leaderboard-body {
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    align-items: flex-end;
-    justify-content: center; }
-  .mod-leaderboard-home .approved-races .marathon-name {
-    font-size: 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e6e6; }
+    .mod-leaderboard-home .leaderboard-body .lb-category {
+      flex: 1; }
+    .mod-leaderboard-home .leaderboard-body .td {
+      padding: 10px 0px;
+      line-height: 1.1; }
+      .mod-leaderboard-home .leaderboard-body .td .photo {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-right: 10px;
+        border-radius: 10px;
+        overflow: hidden; }
+      .mod-leaderboard-home .leaderboard-body .td.td-name {
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        color: #1f1a4f; }
+      .mod-leaderboard-home .leaderboard-body .td.td-score {
+        color: #c82027; }
+  .mod-leaderboard-home .women {
+    border-left: 2px solid #e8e8e8; }
+    .mod-leaderboard-home .women .lb-category-title {
+      justify-content: flex-end; }
+  .mod-leaderboard-home .lb-category-title {
+    background-color: #c82027;
+    font-size: 18px;
+    font-family: "Source-Sans-Pro-Semibold", sans-serif;
+    text-transform: uppercase;
     color: #ffffff;
+    padding: 10px 25px;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px; }
+    .mod-leaderboard-home .lb-category-title .txt-2 {
+      font-size: 16px;
+      font-family: "Source-Sans-Pro-regular", sans-serif; }
+  .mod-leaderboard-home .lb-tr {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
     font-family: "Source-Sans-Pro-regular", sans-serif;
-    line-height: 1.1;
-    margin-top: 10px; }
-  .mod-leaderboard-home .approved-races .slider-item {
-    margin: 0px 20px;
-    text-align: center; }
-  .mod-leaderboard-home .approved-races .slider-wrapper {
-    padding: 0px 40px; }
-.mod-leaderboard-home .slider-navigation .slider-nav {
-  position: absolute;
-  top: 50%; }
-  .mod-leaderboard-home .slider-navigation .slider-nav.nav-right {
-    right: 10px; }
-  .mod-leaderboard-home .slider-navigation .slider-nav.nav-left {
-    left: 25px; }
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0px 25px; }
+    .mod-leaderboard-home .lb-tr.header {
+      color: #a5a5a5;
+      text-transform: uppercase;
+      padding: 0px 25px;
+      margin: 0px; }
+      .mod-leaderboard-home .lb-tr.header .td {
+        color: #a5a5a5; }
+    .mod-leaderboard-home .lb-tr:last-child {
+      border-bottom: none; }
+  .mod-leaderboard-home .action {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px; }
+  .mod-leaderboard-home .leaderboard-slider {
+    background-color: #1f1a4f;
+    padding: 25px;
+    margin-top: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; }
+  .mod-leaderboard-home .approved-races {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .mod-leaderboard-home .approved-races .slider-title {
+      flex-basis: 16%;
+      color: #b3b3b3;
+      font-family: "Source-Sans-Pro-Black", sans-serif;
+      text-transform: uppercase;
+      font-size: 32px;
+      line-height: 1;
+      border-right: 1px solid #3d3963; }
+    .mod-leaderboard-home .approved-races .marathon-slider {
+      flex-basis: 84%; }
+    .mod-leaderboard-home .approved-races .slider-list {
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center; }
+    .mod-leaderboard-home .approved-races .marathon-name {
+      font-size: 16px;
+      color: #ffffff;
+      font-family: "Source-Sans-Pro-regular", sans-serif;
+      line-height: 1.1;
+      margin-top: 10px; }
+    .mod-leaderboard-home .approved-races .slider-item {
+      margin: 0px 20px;
+      text-align: center; }
+    .mod-leaderboard-home .approved-races .slider-wrapper {
+      padding: 0px 40px; }
+  .mod-leaderboard-home .slider-navigation .slider-nav {
+    position: absolute;
+    top: 50%; }
+    .mod-leaderboard-home .slider-navigation .slider-nav.nav-right {
+      right: 10px; }
+    .mod-leaderboard-home .slider-navigation .slider-nav.nav-left {
+      left: 25px; }
 
 @media screen and (max-width: 992px) {
   .mod-showcase .slider.slider-title {
