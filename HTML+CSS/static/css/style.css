@@ -4880,6 +4880,10 @@ ul {
 
 .form-element {
   font-family: "Source-Sans-Pro-Semibold", sans-serif; }
+  .form-element .disable {
+    opacity: 0.7; }
+    .form-element .disable .input-box, .form-element .disable input[type="text"] {
+      cursor: not-allowed; }
   .form-element .form-group {
     display: -moz-box;
     display: -ms-flexbox;
@@ -4887,6 +4891,9 @@ ul {
     display: flex;
     align-items: center;
     margin-bottom: 15px; }
+  .form-element .note-msg {
+    justify-content: center;
+    font-size: 16px; }
   .form-element .org-id {
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
     color: #c82027;
@@ -5055,19 +5062,19 @@ ul {
   .form-element ::-webkit-input-placeholder {
     color: #1f1a4f;
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
-    font-size: 14px; }
+    font-size: 16px; }
   .form-element ::-moz-placeholder {
     color: #1f1a4f;
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
-    font-size: 14px; }
+    font-size: 16px; }
   .form-element :-ms-input-placeholder {
     color: #1f1a4f;
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
-    font-size: 14px; }
+    font-size: 16px; }
   .form-element :-moz-placeholder {
     color: #1f1a4f;
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
-    font-size: 14px; }
+    font-size: 16px; }
 
 .mod-edit .form-element input[type="text"],
 .mod-edit .form-element textarea {
@@ -5268,6 +5275,23 @@ ul {
 .mod-calendar-table .btn-section {
   text-align: center;
   margin-top: 25px; }
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .popup .popup-body {
+    background-color: #ffffff;
+    max-width: 800px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
 @media screen and (max-width: 992px) {
   .mod-content-section .mod-body {
