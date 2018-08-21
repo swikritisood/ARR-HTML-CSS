@@ -4498,7 +4498,8 @@ ul {
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
 
 .action .action-btn {
   color: #1f1a4f;
@@ -4664,6 +4665,16 @@ ul {
         background-color: #c82027; }
       .mod-content-section .btn-section .mod-btn.btn-style-2 {
         background-color: #1f1a4f; }
+      .mod-content-section .btn-section .mod-btn.btn-style-3 {
+        background-color: #1f1a4f;
+        text-transform: unset;
+        padding-left: 35px; }
+        .mod-content-section .btn-section .mod-btn.btn-style-3 span:before {
+          content: "\e838";
+          position: absolute;
+          font-family: "waf-icon-font";
+          left: 15px;
+          top: 12px; }
       .mod-content-section .btn-section .mod-btn.btn-edit {
         background-color: #8b8b8b; }
       .mod-content-section .btn-section .mod-btn:first-child {
@@ -4909,7 +4920,7 @@ ul {
   .form-element .note-msg {
     justify-content: center;
     font-size: 16px; }
-  .form-element .org-id {
+  .form-element .org-id, .form-element .no-edit {
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
     color: #c82027;
     font-size: 15px; }
@@ -5116,24 +5127,33 @@ ul {
 
 .responsive-table {
   border: 1px solid #dee2e6;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   padding: 0px 10px;
-  border-top: none; }
+  overflow: hidden;
+  margin-bottom: 15px; }
 
 .table th, .table td {
   padding: 12px 10px;
   text-align: center;
   font-family: "Source-Sans-Pro-Semibold", sans-serif;
   font-size: 16px;
-  position: relative; }
+  position: relative;
+  line-height: 1; }
 .table td {
   color: #1f1a4f; }
+.table th {
+  border-top: none; }
 .table th, .table th.nr {
   color: #a5a5a5;
   text-transform: uppercase; }
 .table .nr {
   color: #c82027; }
+
+.table-style-2 {
+  padding: 0px; }
+  .table-style-2 .table th {
+    background-color: #b3b3b3;
+    color: #ffffff; }
 
 .mod-event .event-wrapper {
   position: relative;
@@ -5271,7 +5291,8 @@ ul {
       font-family: "waf-icon-font";
       top: 1px; }
 .mod-calendar-table .responsive-table {
-  padding: 0px; }
+  padding: 0px;
+  border-top: none; }
 .mod-calendar-table .table th {
   color: #ffffff;
   background-color: #c82027;
@@ -5397,6 +5418,9 @@ ul {
   .responsive-table {
     overflow-x: auto;
     margin-bottom: 20px; }
+
+  .table th, .table td {
+    white-space: nowrap; }
 
   .mod-content-section .vision-mission-section .vision-wrapper .vision-block {
     flex-direction: column;
