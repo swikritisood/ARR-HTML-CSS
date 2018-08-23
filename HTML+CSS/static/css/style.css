@@ -4779,8 +4779,8 @@ ul {
           background-color: #1f1a4f;
           border-radius: unset;
           flex-direction: column;
-          width: calc(100% + 20px);
-          left: -14px;
+          width: calc(100% + 15px);
+          left: -5px;
           top: 45px;
           padding: 2px 15px;
           border: 1px solid rgba(255, 255, 255, 0.4);
@@ -4888,6 +4888,9 @@ ul {
 .mod-form-section .organization-form {
   max-width: 600px;
   margin: auto; }
+.mod-form-section .race-category-form {
+  max-width: 600px;
+  margin: auto; }
 .mod-form-section .section-title {
   text-align: center;
   margin: 30px 0px; }
@@ -4903,6 +4906,39 @@ ul {
     padding: 0;
     text-transform: unset;
     cursor: pointer; }
+.mod-form-section .mod-add-form {
+  background-color: #f6f6f6;
+  padding: 40px;
+  border-radius: 20px;
+  margin: 20px 0px;
+  position: relative; }
+  .mod-form-section .mod-add-form .form-element input[type="text"], .mod-form-section .mod-add-form .form-element textarea {
+    background-color: #ffffff; }
+  .mod-form-section .mod-add-form .form-element .select-box .select-out {
+    background-color: #ffffff; }
+.mod-form-section .category-number {
+  color: #d6d5dd;
+  font-size: 50px;
+  font-family: 'Gotham-Extra-Light';
+  position: absolute;
+  top: 0;
+  left: 15px; }
+.mod-form-section .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d6d5dd;
+  font-family: 'Gotham-Extra-Light';
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid #d6d5dd;
+  border-radius: 50%;
+  font-size: 14px; }
 
 .form-element {
   font-family: "Source-Sans-Pro-Semibold", sans-serif; }
@@ -5021,7 +5057,7 @@ ul {
   .form-element .select-box {
     position: relative;
     flex: 1;
-    margin: 0px 5px; }
+    margin: 0px 7px; }
     .form-element .select-box:first-child {
       margin-left: 0px; }
     .form-element .select-box .select-out {
@@ -5045,8 +5081,8 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px; }
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; }
     .form-element .select-box select {
       position: absolute;
       top: 0px;
@@ -5394,26 +5430,7 @@ ul {
     .mod-content-section .tab.content-tab ul {
       justify-content: flex-start; }
   .mod-content-section .mod-head .title {
-    font-size: 20px; }
-
-  .mod-form-section .section-title {
-    text-align: center;
-    margin: 15px 0px; }
-
-  .form-element .form-group {
-    align-items: unset;
-    flex-direction: column; }
-  .form-element .label {
-    text-align: left;
-    margin-bottom: 5px; }
-  .form-element .input-box {
-    margin-left: 0px; }
-  .form-element .input-radio {
-    margin-left: 0px; }
-  .form-element .upload-box .file-upload {
-    display: block; }
-  .form-element .upload-box .file-url {
-    margin-left: 0px; } }
+    font-size: 20px; } }
 @media screen and (max-width: 767px) {
   .responsive-table {
     overflow-x: auto;
@@ -5465,7 +5482,8 @@ ul {
   .mod-content-section .mod-body .title {
     font-size: 16px; }
   .mod-content-section .btn-section .mod-btn {
-    font-size: 14px; }
+    font-size: 14px;
+    margin: 5px; }
   .mod-content-section .google-map iframe {
     height: 200px; }
 
@@ -5484,7 +5502,33 @@ ul {
       .mod-error-page .right-block .txt-3:before {
         left: -4px;
         font-size: 10px;
-        top: -2px; } }
+        top: -2px; }
+
+  .mod-form-section .section-title {
+    text-align: center;
+    margin: 15px 0px; }
+  .mod-form-section .mod-add-form {
+    padding: 12px; }
+  .mod-form-section .category-number {
+    font-size: 32px;
+    position: relative;
+    left: 0px;
+    line-height: 1; }
+
+  .form-element .form-group {
+    align-items: unset;
+    flex-direction: column; }
+  .form-element .label {
+    text-align: left;
+    margin-bottom: 5px; }
+  .form-element .input-box {
+    margin-left: 0px; }
+  .form-element .input-radio {
+    margin-left: 0px; }
+  .form-element .upload-box .file-upload {
+    display: block; }
+  .form-element .upload-box .file-url {
+    margin-left: 0px; } }
 .mod-showcase {
   position: relative;
   padding: 0px; }
