@@ -4685,6 +4685,8 @@ ul {
     text-align: center;
     color: #ffffff;
     background-image: url(../images/patten-bg.png); }
+    .mod-content-section .tab.content-tab .tab-wrapper {
+      overflow: visible; }
     .mod-content-section .tab.content-tab ul {
       display: -moz-box;
       display: -ms-flexbox;
