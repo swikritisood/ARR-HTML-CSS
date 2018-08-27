@@ -8,6 +8,8 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -100,167 +102,101 @@
 				<div class="container">
 					<div class="content-wrapper">
 						<div class="tab content-tab runner-tab">
-							<div class="tab-wrapper">
-								<ul>
-									<li class="active"><a href=""><span>ARR Information</span></a></li>
-									<li><a href=""><span>Add Race Timing</span></a></li>
-									<li class="submenu"><a href=ARR Information""><span>My Rank</span></a>
+							<div class="tab-wrapper swiper-container">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide"><a href=""><span>ARR Information</span></a></li>
+									<li class="swiper-slide"><a href=""><span>Add Race Timing</span></a></li>
+									<li class="submenu swiper-slide"><a href=""><span>My Rank</span></a>
 										<a href="javascript:void(0)" class="dropsub-menu"></a>
 										<ul>
 											<li><a href=""><span>Customize</span></a></li>
 										</ul>
 									</li>
-									<li><a href=""><span>Unlisted Race Timing</span></a></li>
+									<li class="swiper-slide"><a href=""><span>Unlisted Race Timing</span></a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="mod-head">
-							<h1 class="title"><span>ARR Information</span></h1>
-						</div>
-						<div class="form-tab tabs">
-							<ul>
-								<li class="id">
-									<span class="txt-1">ARR ID -</span>
-									<span class="txt-2">ARR007</span>
-								</li>
-								<li class="points">
-									<span class="txt-1">ARR POINTS -</span>
-									<span class="txt-2">1000</span>
-								</li>
-								<li class="rank">
-									<span class="txt-1">ARR all india rank -</span>
-									<span class="txt-2">159900</span>
-								</li>
-							</ul>
+							<h1 class="title"><span>Race Timing</span></h1>
 						</div>
 						<div class="mod-body">
-							<div class="mod-form mod-edit">
+							<div class="mod-form">
 								<form>
-									<div class="runner-form">
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-element">
-													<div class="form-row">
-														<div class="form-group">
-															<div class="label">
-																<label>Run Club</label>
-															</div>
-															<div class="input-box">
-																<input type="text" placeholder="AAA Club">
-															</div>
-														</div>
-														<div class="form-group">
-															<div class="label">
-																<label>Industry</label>
-															</div>
-															<div class="input-box">
-																<input type="text" placeholder="Software">
-															</div>
-														</div>
-														<div class="form-group">
-															<div class="label">
-																<label>Years of Running</label>
-															</div>
-															<div class="input-box">
-																<div class="select-box-wrapper">
-																	<div class="select-box date">
-																		<span class="select-out">1</span>
-																		<select>
-																			<option>1</option>
-																			<option>2</option>
-																			<option>3</option>
-																			<option>4</option>
-																			<option>5</option>
-																		</select>
-																	</div>
-																</div>
+									<div class="organization-form">
+										<div class="form-element">
+											<div class="form-row">
+												<div class="form-group">
+													<div class="label">
+														<label>Race Name</label>
+													</div>
+													<div class="input-box">
+														<div class="select-box-wrapper">
+															<div class="select-box">
+																<span class="select-out">Awesome Race 2018 Bombay</span>
+																<select>
+																	<option>Awesome Race 2018 Bombay</option>
+																	<option>Awesome Race 2018 Bombay</option>
+																</select>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-element">
-													<div class="form-row">
-														<div class="form-group">
-															<div class="label">
-																<label>Location</label>
-															</div>
-															<div class="input-box">
-																<div class="select-box-wrapper">
-																	<div class="select-box location">
-																		<span class="select-out">Chennai</span>
-																		<select>
-																			<option>Chennai</option>
-																			<option>Mumbai</option>
-																			<option>Andhrapradesh</option>
-																			<option>Pandicheri</option>
-																			<option>Bangladesh</option>
-																		</select>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="form-group">
-															<div class="label">
-																<label>Company</label>
-															</div>
-															<div class="input-box">
-																<input type="text" placeholder="Event Jini">
-															</div>
-														</div>
-														<div class="form-group">
-															<div class="label">
-																<label>Raise Money for Charity</label>
-															</div>
-															<div class="input-radio">
-																<div class="radio-wrapper">
-																	
-																	<input type="radio" name="radio-group">
-																	<span>Yes</span>
-																</div>
-																<div class="radio-wrapper">
-																	
-																	<input type="radio" name="radio-group">
-																	<span>No</span>
-																</div>
+												<div class="form-group">
+													<div class="label">
+														<label>Category Name</label>
+													</div>
+													<div class="input-box">
+														<div class="select-box-wrapper">
+															<div class="select-box">
+																<span class="select-out">Pro10K</span>
+																<select>
+																	<option>Pro10K</option>
+																	<option>Pro10K</option>
+																</select>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-
-											<div class="col-12">
-												<div class="form-element text-center">
-													<div class="form-row">
-														<div class="form-group">
-															<div class="label">
-																<label>My ARR Photo</label>
-															</div>
-															<div class="user-photo">
-																<img src="..\static\images\runner-photos.png">
-															</div>
-															<div class="input-box">
-																<div class="upload-box">
-																	<div class="file-upload">
-																		<span>Upload Photo</span>
-																		<input type="file" name="fileToUpload" class="photo-upload">
-																	</div>
-																</div>
-															</div>
-														</div>
+												<div class="form-group disable">
+													<div class="label">
+														<label>Distance</label>
+													</div>
+													<div class="input-box">
+														<input type="text" placeholder="10K">
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="label">
+														<label>BIB Number</label>
+													</div>
+													<div class="input-box">
+														<input type="text" placeholder="TK112233">
+													</div>
+												</div>
+												<div class="btn-section">
+													<div class="mod-btn btn-style-1">
+														<input type="submit" name="" value="Submit" class="submit-btn">
+													</div>
+												</div>
+												<div class="form-group note-msg">
+													<div class="note green">
+														<span>OTP send successfully.</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="label">
+														<label>Submit OTP</label>
+													</div>
+													<div class="input-box">
+														<input type="text" placeholder="12345">
+													</div>
+												</div>
+												<div class="btn-section">
+													<div class="mod-btn btn-style-1">
+														<input type="submit" name="" value="confirm OTP" class="submit-btn">
 													</div>
 												</div>
 											</div>
-
-										</div>
-									</div>
-									<div class="btn-section">
-										<div class="mod-btn btn-edit">
-											<a href=""><span>Edit</span></a>
-										</div>
-										<div class="mod-btn btn-style-1">
-											<input type="submit" name="" value="submit" class="submit-btn">
 										</div>
 									</div>
 								</form>
@@ -318,6 +254,23 @@
 			<p>© Copyright 2018 AMATEUR runner ranking All Rights Reserved.</p>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function () {
+			if($(window).width() < 767){
+				var mySwiper = new Swiper ('.content-tab .swiper-container', {
+					direction: 'horizontal',
+					setWrapperSize: true,
+					slidesPerView:'2',
+				});
+			}
+		});
+
+		$(".dropsub-menu").off("click").on("click",function(e){
+			e.stopPropagation();
+			$(".submenu").toggleClass("active-dropdown");
+
+		});
+	</script>
 </footer>
 </div>
 </body>

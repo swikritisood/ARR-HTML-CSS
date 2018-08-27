@@ -4885,6 +4885,63 @@ ul {
     line-height: 1.5;
     text-align: justify; }
 
+.form-tab.tabs {
+  background-color: #c82027; }
+  .form-tab.tabs ul {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center; }
+    .form-tab.tabs ul li {
+      padding: 15px 45px;
+      text-transform: uppercase;
+      font-size: 20px;
+      position: relative; }
+      .form-tab.tabs ul li:after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 60%;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+20,1+80,0+100 */
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 30%, white 70%, rgba(255, 255, 255, 0) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 30%, white 70%, rgba(255, 255, 255, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 30%, white 70%, rgba(255, 255, 255, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+        /* IE6-9 */ }
+      .form-tab.tabs ul li:before {
+        content: "";
+        position: absolute;
+        left: 18px;
+        width: 20px;
+        top: 20px;
+        height: 20px;
+        display: block;
+        background-size: auto 100%;
+        background-repeat: no-repeat; }
+      .form-tab.tabs ul li.id:before {
+        background-image: url(../images/id-icon.png);
+        left: 22px; }
+      .form-tab.tabs ul li.points:before {
+        background-image: url(../images/points-icon.png); }
+      .form-tab.tabs ul li.rank:before {
+        background-image: url(../images/rank-icon.png); }
+      .form-tab.tabs ul li:last-child:after {
+        display: none; }
+    .form-tab.tabs ul .txt-1 {
+      font-family: "Source-Sans-Pro-Semibold", sans-serif;
+      font-size: 18px; }
+    .form-tab.tabs ul .txt-2 {
+      font-family: "Source-Sans-Pro-bold", sans-serif; }
+
 .mod-form-section .mod-body {
   max-width: 1000px; }
 .mod-form-section .organization-form {
@@ -5227,20 +5284,14 @@ ul {
     justify-content: center;
     align-items: flex-end;
     padding: 10px;
-    position: relative; }
-    .mod-event .event-list .event-item:before {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(33, 28, 82, 0.7); }
-    .mod-event .event-list .event-item.active:before {
-      background-color: rgba(206, 38, 45, 0.8); }
-    .mod-event .event-list .event-item.active .mod-btn {
-      background-color: #ffffff;
-      color: #c82027; }
+    position: relative;
+    background-color: #1f1a4f;
+    background-blend-mode: luminosity; }
+    .mod-event .event-list .event-item.active {
+      background-color: #c82027; }
+      .mod-event .event-list .event-item.active .mod-btn {
+        background-color: #ffffff;
+        color: #c82027; }
   .mod-event .event-list .title {
     font-size: 18px;
     color: #ffffff;
@@ -5330,7 +5381,9 @@ ul {
       top: 1px; }
 .mod-calendar-table .responsive-table {
   padding: 0px;
-  border-top: none; }
+  border-top: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px; }
 .mod-calendar-table .table th {
   color: #ffffff;
   background-color: #c82027;
@@ -5423,6 +5476,91 @@ ul {
         position: relative;
         top: -3px; }
 
+.mod-selected-user {
+  position: relative;
+  padding: 20px;
+  margin: 20px 0px; }
+  .mod-selected-user:before {
+    content: "";
+    left: 50%;
+    top: 0px;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: #f8f8f8;
+    position: absolute; }
+  .mod-selected-user .selected-user-wrapper {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    background-color: #1f1a4f;
+    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    overflow: hidden; }
+    .mod-selected-user .selected-user-wrapper > div {
+      padding: 20px 30px;
+      align-self: center;
+      flex: 1;
+      position: relative; }
+      .mod-selected-user .selected-user-wrapper > div:after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 70px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+20,1+80,0+100 */
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 30%, white 70%, rgba(255, 255, 255, 0) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 30%, white 70%, rgba(255, 255, 255, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 30%, white 70%, rgba(255, 255, 255, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+        /* IE6-9 */ }
+      .mod-selected-user .selected-user-wrapper > div:first-child:after, .mod-selected-user .selected-user-wrapper > div:last-child:after {
+        display: none; }
+    .mod-selected-user .selected-user-wrapper .user-position {
+      background-color: #c82027;
+      align-self: unset;
+      padding-top: 35px;
+      flex: unset; }
+    .mod-selected-user .selected-user-wrapper .txt-1 {
+      display: block;
+      font-family: "Source-Sans-Pro-Semibold", sans-serif;
+      line-height: 1;
+      font-size: 18px; }
+    .mod-selected-user .selected-user-wrapper .txt-2 {
+      display: block;
+      font-family: "Source-Sans-Pro-bold", sans-serif;
+      line-height: 1;
+      font-size: 30px; }
+  .mod-selected-user .user-name {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .mod-selected-user .user-name .txt-1 {
+      font-size: 30px; }
+    .mod-selected-user .user-name .txt-2 {
+      font-size: 20px; }
+  .mod-selected-user .photo {
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    overflow: hidden; }
+    .mod-selected-user .photo img {
+      width: 100%;
+      top: 5px;
+      position: relative; }
+
 @media screen and (max-width: 992px) {
   .mod-content-section .mod-body {
     padding: 10px;
@@ -5432,7 +5570,13 @@ ul {
     .mod-content-section .tab.content-tab ul {
       justify-content: flex-start; }
   .mod-content-section .mod-head .title {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  .form-tab.tabs ul li {
+    padding: 15px 15px 15px 45px;
+    font-size: 18px; }
+  .form-tab.tabs ul .txt-1 {
+    font-size: 16px; } }
 @media screen and (max-width: 767px) {
   .responsive-table {
     overflow-x: auto;
@@ -5488,6 +5632,9 @@ ul {
     margin: 5px; }
   .mod-content-section .google-map iframe {
     height: 200px; }
+  .mod-content-section .tab.content-tab.runner-tab ul li {
+    flex: unset;
+    padding: 10px 2px; }
 
   .mod-error-page {
     height: auto;
@@ -5530,7 +5677,25 @@ ul {
   .form-element .upload-box .file-upload {
     display: block; }
   .form-element .upload-box .file-url {
-    margin-left: 0px; } }
+    margin-left: 0px; }
+
+  .form-tab.tabs ul {
+    align-items: flex-start;
+    flex-direction: column; }
+    .form-tab.tabs ul li {
+      padding: 10px 15px 10px 32px;
+      font-size: 18px;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+      .form-tab.tabs ul li:after {
+        display: none; }
+      .form-tab.tabs ul li:before {
+        left: 7px;
+        top: 14px; }
+      .form-tab.tabs ul li.id:before {
+        left: 10px; }
+    .form-tab.tabs ul .txt-1 {
+      font-size: 16px; } }
 .mod-showcase {
   position: relative;
   padding: 0px; }
