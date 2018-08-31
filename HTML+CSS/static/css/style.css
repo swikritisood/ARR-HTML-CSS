@@ -5004,7 +5004,7 @@ ul {
       font-family: "Source-Sans-Pro-bold", sans-serif; }
 
 .mod-form-section .mod-body {
-  max-width: 1000px; }
+  max-width: 1100px; }
 .mod-form-section .organization-form {
   max-width: 600px;
   margin: auto; }
@@ -5822,7 +5822,7 @@ ul {
       width: 1px;
       height: 100%;
       position: absolute;
-      right: 25px;
+      right: 35px;
       top: 0px;
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#797695+0,797695+100&0.13+0,1+30,1+70,0+100 */
       background: -moz-linear-gradient(top, rgba(121, 118, 149, 0.13) 0%, #797695 30%, #797695 70%, rgba(121, 118, 149, 0) 100%);
@@ -5836,8 +5836,7 @@ ul {
     .mod-rank-userinfo .user-photo .photo {
       width: 100px;
       height: 100px;
-      margin: 20px auto 10px;
-      border: 1px solid;
+      margin: auto 30px;
       border-radius: 50%;
       overflow: hidden;
       background-color: #ffffff;
@@ -5878,9 +5877,20 @@ ul {
     align-items: center;
     font-family: "Source-Sans-Pro-bold", sans-serif;
     color: #1f1a4f;
-    font-size: 28px; }
-  .mod-running-credentials .flag-section {
+    font-size: 28px;
     position: relative; }
+    .mod-running-credentials .number:before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      left: -2px;
+      background-color: #ffffff;
+      height: 2px;
+      bottom: -4px; }
+  .mod-running-credentials .flag-section {
+    position: relative;
+    border-bottom: 2px solid #fff;
+    top: 2px; }
   .mod-running-credentials .runner {
     position: absolute;
     bottom: 0;
@@ -5910,7 +5920,7 @@ ul {
       transform: translateY(-50%); }
   .mod-running-credentials .item-4 .number, .mod-running-credentials .item-5 .number {
     background-color: #c82027;
-    border: 2 px solid #c82027;
+    border: 2px solid #c82027;
     color: #ffffff; }
   .mod-running-credentials .item-4 .marathon-name, .mod-running-credentials .item-5 .marathon-name {
     background-color: #c82027; }
@@ -5923,7 +5933,8 @@ ul {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 5px; }
 
 .score-point {
   color: #1f1a4f;
@@ -5955,7 +5966,20 @@ ul {
     padding: 15px 15px 15px 45px;
     font-size: 18px; }
   .form-tab.tabs ul .txt-1 {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .mod-rank-userinfo .user-photo {
+    flex-basis: 15%; }
+    .mod-rank-userinfo .user-photo .photo {
+      width: 75px;
+      height: 75px;
+      margin: auto 10px; }
+    .mod-rank-userinfo .user-photo:before {
+      right: 10px; }
+  .mod-rank-userinfo .user-info {
+    flex-basis: 85%; }
+  .mod-rank-userinfo .txt-2 {
+    font-size: 24px; } }
 @media screen and (max-width: 767px) {
   .responsive-table {
     overflow-x: auto;
@@ -6006,6 +6030,8 @@ ul {
     font-size: 15px; }
   .mod-content-section .mod-body .title {
     font-size: 16px; }
+  .mod-content-section .mod-body .title-2 {
+    font-size: 16px; }
   .mod-content-section .btn-section .mod-btn {
     font-size: 14px;
     margin: 5px; }
@@ -6014,6 +6040,9 @@ ul {
   .mod-content-section .tab.content-tab.runner-tab ul li {
     flex: unset;
     padding: 10px 2px; }
+
+  .score-point {
+    text-align: right; }
 
   .mod-error-page {
     height: auto;
@@ -6110,12 +6139,65 @@ ul {
       width: 45%;
       flex: unset; }
     .mod-leadercard .card-number {
-      font-size: 30px; } }
+      font-size: 30px; }
+
+  .mod-rank-userinfo .rank-info-wrapper {
+    flex-direction: column; }
+    .mod-rank-userinfo .rank-info-wrapper .user-photo:before {
+      display: none; }
+  .mod-rank-userinfo .top-section {
+    flex-direction: column;
+    padding: 0px; }
+    .mod-rank-userinfo .top-section > div:last-child:before {
+      display: none; }
+    .mod-rank-userinfo .top-section:before {
+      display: none; }
+  .mod-rank-userinfo .bottom-section {
+    flex-direction: column;
+    padding: 0px; }
+    .mod-rank-userinfo .bottom-section > div:after {
+      display: none; }
+  .mod-rank-userinfo .info-text {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    .mod-rank-userinfo .info-text:last-child {
+      border-bottom: none; }
+  .mod-rank-userinfo .txt-1 {
+    font-size: 16px; }
+  .mod-rank-userinfo .txt-2 {
+    font-size: 20px; }
+
+  .mod-running-credentials .number {
+    width: 30px;
+    height: 30px;
+    font-size: 18px; }
+  .mod-running-credentials .marathon-name {
+    font-size: 12px; }
+    .mod-running-credentials .marathon-name:before {
+      height: 35px;
+      top: -2px; }
+  .mod-running-credentials .runner {
+    left: -25px; }
+    .mod-running-credentials .runner img {
+      height: 30px; }
+  .mod-running-credentials .item-1 {
+    width: 48%; }
+  .mod-running-credentials .item-2 {
+    width: 55%; }
+  .mod-running-credentials .item-3 {
+    width: 65%; }
+  .mod-running-credentials .item-4 {
+    width: 90%; }
+  .mod-running-credentials .item-5 {
+    width: 100%; } }
 @media screen and (max-width: 520px) {
   .mod-leadercard .leadercard-listing {
     flex-direction: column; }
   .mod-leadercard .leadercard-item {
     margin: 0px 0px 15px; } }
+.margin-0 {
+  margin: 0px; }
+
 .mod-showcase {
   position: relative;
   padding: 0px; }
