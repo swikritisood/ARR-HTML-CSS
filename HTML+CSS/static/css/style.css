@@ -5744,7 +5744,8 @@ ul {
   .search-leaderboard .pos {
     color: #b3b3b3; }
   .search-leaderboard .rank {
-    color: #c82027; }
+    color: #c82027;
+    width: 20%; }
   .search-leaderboard .name {
     text-align: left; }
     .search-leaderboard .name .photo {
