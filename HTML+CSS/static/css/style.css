@@ -4843,7 +4843,8 @@ ul {
               display: block;
               font-family: "waf-icon-font";
               transform: rotate(0deg);
-              background-color: transparent; }
+              background-color: transparent;
+              cursor: pointer; }
             .mod-content-section .tab.content-tab ul li.submenu ul li.secondary-submenu.active {
               padding-bottom: 0px;
               background-color: transparent; }
@@ -4895,6 +4896,9 @@ ul {
           display: none; }
       .mod-content-section .tab.content-tab.super-admin-tab ul a {
         display: block; }
+  .mod-content-section .tabs.leaderboard-tab ul li {
+    margin-bottom: 0px;
+    padding-left: 10px; }
   .mod-content-section .vision-mission-section .vision-wrapper .vision-block {
     display: flex;
     align-items: flex-end;
@@ -5002,6 +5006,28 @@ ul {
       font-size: 18px; }
     .form-tab.tabs ul .txt-2 {
       font-family: "Source-Sans-Pro-bold", sans-serif; }
+
+.tabs > ul {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  .tabs > ul li {
+    padding: 15px 10px;
+    color: #ffffff;
+    background-color: #1f1a4f;
+    font-family: "Source-Sans-Pro-Semibold", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    line-height: 1; }
+    .tabs > ul li:before {
+      display: none; }
+    .tabs > ul li.active {
+      background-color: #c82027; }
 
 .mod-form-section .mod-body {
   max-width: 1100px; }
@@ -5313,6 +5339,12 @@ ul {
     text-transform: uppercase; }
   .table .nr {
     color: #c82027; }
+  .table .approve {
+    background-color: #0bac08;
+    color: #ffffff; }
+  .table .reject {
+    background-color: #c82027;
+    color: #ffffff; }
 
 .table-style-2 {
   padding: 0px; }
@@ -6040,6 +6072,10 @@ ul {
   .mod-content-section .tab.content-tab.runner-tab ul li {
     flex: unset;
     padding: 10px 2px; }
+  .mod-content-section .tabs.leaderboard-tab ul {
+    flex-direction: column; }
+    .mod-content-section .tabs.leaderboard-tab ul li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
 
   .score-point {
     text-align: right; }
