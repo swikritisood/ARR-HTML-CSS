@@ -4472,6 +4472,10 @@ ul {
     .site-content.mod-error404 .mod-top-banner {
       height: 160px; }
 
+.deactivation-section {
+  opacity: 0.3;
+  pointer-events: none; }
+
 .social-link {
   padding-left: 15px; }
   .social-link li {
@@ -4654,6 +4658,8 @@ ul {
         color: #c82027; }
       .mod-content-section .mod-body .note.green {
         color: #0bac08; }
+      .mod-content-section .mod-body .note.text-center {
+        justify-content: center; }
     .mod-content-section .mod-body .download-link-msg {
       color: #319bc2;
       font-family: "Source-Sans-Pro-Semibold", sans-serif;
@@ -5086,12 +5092,15 @@ ul {
   border-radius: 50%;
   font-size: 14px; }
 
+.mod-noti-msg .form-element textarea {
+  line-height: 1;
+  min-height: 180px; }
+
 .form-element {
   font-family: "Source-Sans-Pro-Semibold", sans-serif; }
   .form-element .disable {
-    opacity: 0.7; }
-    .form-element .disable .input-box, .form-element .disable input[type="text"] {
-      cursor: not-allowed; }
+    opacity: 0.3;
+    pointer-events: none; }
   .form-element .form-group {
     display: -moz-box;
     display: -ms-flexbox;
@@ -5099,6 +5108,8 @@ ul {
     display: flex;
     align-items: center;
     margin-bottom: 15px; }
+    .form-element .form-group.text-center {
+      justify-content: center; }
   .form-element .note-msg {
     justify-content: center;
     font-size: 16px; }
@@ -5258,7 +5269,14 @@ ul {
     font-size: 16px;
     font-family: "Source-Sans-Pro-regular", sans-serif;
     color: #1f1a4f;
-    margin-left: 10px; }
+    margin: 0px 10px; }
+  .form-element .upload-box .file-view {
+    font-size: 16px;
+    font-family: "Source-Sans-Pro-Semibold", sans-serif;
+    color: #319bc2;
+    padding: 8px 15px;
+    background-color: #f6f6f6;
+    border-radius: 10px; }
   .form-element ::-webkit-input-placeholder {
     color: #1f1a4f;
     font-family: "Source-Sans-Pro-Semibold", sans-serif;
@@ -6123,6 +6141,8 @@ ul {
     display: block; }
   .form-element .upload-box .file-url {
     margin-left: 0px; }
+  .form-element .file-view {
+    display: block; }
 
   .form-tab.tabs ul {
     align-items: flex-start;
